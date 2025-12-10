@@ -1,0 +1,66 @@
+##Algorithm
+
+QUICKSORT(A, low, high)
+1. If low < high:
+2.     p = PARTITION(A, low, high)
+3.     QUICKSORT(A, low, p-1)
+4.     QUICKSORT(A, p+1, high)
+
+PARTITION(A, low, high)
+1. pivot = A[high]
+2. i = low - 1
+3. For j = low to high-1:
+4.       If A[j] <= pivot:
+5.            i = i + 1
+6.            swap A[i], A[j]
+7. Swap A[i+1], A[high]
+8. return (i + 1)
+
+
+##Code Section
+
+
+#include <stdio.h>
+
+void swap(int *a, int *b) {
+    int t = *a; *a = *b; *b = t;
+}
+
+int partition(int a[], int low, int high) {
+    int pivot = a[high];
+    int i = low - 1;
+
+    for (int j = low; j < high; j++)
+        if (a[j] <= pivot)
+            swap(&a[++i], &a[j]);
+
+    swap(&a[i + 1], &a[high]);
+    return i + 1;
+}
+
+void quicksort(int a[], int low, int high) {
+    if (low < high) {
+        int p = partition(a, low, high);
+        quicksort(a, low, p - 1);
+        quicksort(a, p + 1, high);
+    }
+}
+
+int main() {
+
+    // Default example input
+    int a[] = {10, 3, 8, 2, 7};
+    int n = 5;
+
+    printf("Default Input Array: ");
+    for (int i = 0; i < n; i++)
+        printf("%d ", a[i]);
+
+    quicksort(a, 0, n - 1);
+
+    printf("\nSorted Array: ");
+    for (int i = 0; i < n; i++)
+        printf("%d ", a[i]);
+
+    return 0;
+}
