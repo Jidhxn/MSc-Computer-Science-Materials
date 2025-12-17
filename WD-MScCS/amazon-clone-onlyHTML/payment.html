@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Payment - BookBarn</title>
+</head>
+<body>
+  <header>
+    <h1>Checkout — Payment</h1>
+    <nav><a href="cart.html">Back to cart</a> | <a href="profile.html">My Account</a></nav>
+    <hr>
+  </header>
+
+  <main>
+    <h2>Billing & payment</h2>
+
+    <!-- Note: This form is static; do not collect real card data on static pages -->
+    <p><strong>Important:</strong> This is a static demo. Do not enter real card details.</p>
+
+    <form action="confirmation.html" method="post">
+      <fieldset>
+        <legend>Billing address</legend>
+        <p><label for="bill-name">Full name</label><br><input id="bill-name" name="bill-name"></p>
+        <p><label for="bill-addr">Address</label><br><textarea id="bill-addr" name="bill-addr" rows="3"></textarea></p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Credit card</legend>
+        <p><label for="cc-number">Card number</label><br><input id="cc-number" name="cc-number" maxlength="19" placeholder="1234 5678 9012 3456"></p>
+        <p>
+          <label for="exp">Expiry (MM/YY)</label><br>
+          <input id="exp" name="exp" placeholder="MM/YY" style="width:80px;">
+        </p>
+        <p><label for="cvc">CVC</label><br><input id="cvc" name="cvc" maxlength="4" style="width:80px;"></p>
+      </fieldset>
+
+      <p>
+        <input type="submit" value="Pay $34.49">
+      </p>
+    </form>
+  </main>
+
+  <footer><small>&copy; 2025 BookBarn</small></footer>
+</body>
+</html>

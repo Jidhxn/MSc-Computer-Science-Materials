@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>BookBarn - Home</title>
+</head>
+<body>
+  <!-- Simple header -->
+  <header>
+    <h1>BookBarn</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="catalog.html">Books</a> |
+      <a href="cart.html">Cart</a> |
+      <a href="profile.html">My Account</a> |
+      <a href="login.html">Login</a> |
+      <a href="register.html">Register</a>
+    </nav>
+    <hr>
+  </header>
+
+  <!-- Search bar (static) -->
+  <section>
+    <form action="#" method="get">
+      <label for="q">Search books:</label>
+      <input id="q" name="q" placeholder="Title, author, ISBN">
+      <input type="submit" value="Search">
+    </form>
+  </section>
+
+  <!-- Featured area -->
+  <main>
+    <h2>Featured categories</h2>
+    <ul>
+      <li><a href="catalog.html?q=fiction">Fiction</a></li>
+      <li><a href="catalog.html?q=non-fiction">Non-Fiction</a></li>
+      <li><a href="catalog.html?q=children">Children</a></li>
+      <li><a href="catalog.html?q=computers">Computers & Tech</a></li>
+    </ul>
+
+    <h2>Best sellers (sample)</h2>
+    <ol>
+      <li><a href="catalog.html#book-101">The Silent Code</a> — $9.99</li>
+      <li><a href="catalog.html#book-102">Deep Learning for Everyone</a> — $24.50</li>
+      <li><a href="catalog.html#book-103">Adventures of Kip</a> — $12.00</li>
+    </ol>
+  </main>
+
+  <footer>
+    <hr>
+    <small>&copy; 2025 BookBarn — This is a static demo site. Links/forms don't submit to a server.</small>
+  </footer>
+</body>
+</html>
